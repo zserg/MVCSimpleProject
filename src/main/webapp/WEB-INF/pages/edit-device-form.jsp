@@ -15,21 +15,17 @@
 	<h1>Edit device page</h1>
 	<p>Here you can edit the existing device.</p>
 	<p>${message}</p>
-	<form:form method="POST" commandName="device"
-		action="${pageContext.request.contextPath}/device/edit/${device.id}.html">
+	<form:form method="POST" commandName="car"
+		action="${pageContext.request.contextPath}/car/edit/${car.id}.html">
 		<table>
 			<tbody>
 				<tr>
 					<td>Host Name:</td>
-					<td><form:input path="hostName" /></td>
+					<td><form:input path="carOwner" /></td>
 				</tr>
 				<tr>
 					<td>IP Address:</td>
-					<td><form:input path="ipAddress" /></td>
-				</tr>
-				<tr>
-					<td>Enabled:</td>
-					<td><form:input path="enabled" /></td>
+					<td><form:input path="carModel" /></td>
 				</tr>
 				<tr>
 					<td><input type="submit" value="Edit" /></td>

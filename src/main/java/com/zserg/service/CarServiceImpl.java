@@ -20,7 +20,7 @@ public class CarServiceImpl implements CarService {
 		carDAO.addCar(car);
 	}
 
-	public List<Car> getCar() {
+	public List<Car> getCars() {
 		return carDAO.getCars();
 	}
 

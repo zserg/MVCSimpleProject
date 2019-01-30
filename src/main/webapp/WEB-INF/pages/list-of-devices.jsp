@@ -25,17 +25,17 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="device" items="${devices}">
+			<c:forEach var="car" items="${cars}">
 				<tr>
-					<td>${device.id}</td>
-					<td>${device.hostName}</td>
-					<td>${device.ipAddress}</td>
-					<td>${device.enabled}</td>
-					<td>${device.creationDate}</td>
+					<td>${car.id}</td>
+					<td>${car.hostName}</td>
+					<td>${car.ipAddress}</td>
+					<td>${car.enabled}</td>
+					<td>${car.creationDate}</td>
 					<td><a
-						href="${pageContext.request.contextPath}/device/edit/${device.id}.html">Edit</a><br />
+						href="${pageContext.request.contextPath}/car/edit/${car.id}.html">Edit</a><br />
 						<a
-						href="${pageContext.request.contextPath}/device/delete/${device.id}.html">Delete</a><br />
+						href="${pageContext.request.contextPath}/car/delete/${car.id}.html">Delete</a><br />
 					</td>
 				</tr>
 			</c:forEach>

@@ -1,4 +1,4 @@
-<project xmlns:ivy="antlib:org.apache.ivy.ant" name="SpringMVCProject" default="main" basedir=".">
+<project xmlns:ivy="antlib:org.apache.ivy.ant" name="MCVSimpleProject" default="main" basedir=".">
 	<description>
 		MVCSimpleProject
 	</description>
@@ -65,6 +65,7 @@
 	<target name="clean" description="clean up">
 		<delete dir="${web.classes.dir}" />
 		<delete dir="${target.dir}" />
+		<delete dir="${lib.dir}" />
 	</target>
 
 	<target name="main" depends="package" />

@@ -11,9 +11,9 @@
 	<h1>Trap Agent Home page</h1>
 	<p>
 		${message}<br /> <a
-			href="${pageContext.request.contextPath}/device/add.html">Add new
+			href="${pageContext.request.contextPath}/car/add.html">Add new
 			device</a><br /> <a
-			href="${pageContext.request.contextPath}/device/list.html">Device
+			href="${pageContext.request.contextPath}/car/list.html">Device
 			list</a><br />
 	</p>
 </body>
