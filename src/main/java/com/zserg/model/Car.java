@@ -1,6 +1,4 @@
-package com.mahesh.model;
-
-import java.sql.Timestamp;
+package com.zserg.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
