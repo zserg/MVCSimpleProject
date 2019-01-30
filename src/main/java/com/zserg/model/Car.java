@@ -10,21 +10,19 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "device")
-public class Device {
+@Table(name = "car")
+public class Car {
 
 	@Id
 	@Column(name = "id", columnDefinition = "serial")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	private String hostName;
+	private String carModel;
 
-	private String ipAddress;
+	private String ownerName;
 
-	private boolean enabled;
-
-	private Timestamp creationDate;
+	private String licensePlate;
 
 	public Integer getId() {
 		return id;
@@ -34,36 +32,29 @@ public class Device {
 		this.id = id;
 	}
 
-	public String getHostName() {
-		return hostName;
+	public String getCarModel() {
+		return carModel;
 	}
 
-	public void setHostName(String hostName) {
-		this.hostName = hostName;
+	public void setCarModel(String carModel) {
+		this.carModel = carModel;
 	}
 
-	public String getIpAddress() {
-		return ipAddress;
+	public String getOwnerName() {
+		return ownerName;
 	}
 
-	public void setIpAddress(String ipAddress) {
-		this.ipAddress = ipAddress;
+	public void setOwnerName(String ownerName) {
+		this.ownerName = ownerName;
 	}
 
-	public boolean isEnabled() {
-		return enabled;
+	public String getLicensePlate() {
+		return licensePlate;
 	}
 
-	public void setEnabled(boolean enabled) {
-		this.enabled = enabled;
+	public void setLicensePlate(String licensePlate) {
+		this.licensePlate = licensePlate;
 	}
 
-	public Timestamp getCreationDate() {
-		return creationDate;
-	}
-
-	public void setCreationDate(Timestamp creationDate) {
-		this.creationDate = creationDate;
-	}
 
 }
