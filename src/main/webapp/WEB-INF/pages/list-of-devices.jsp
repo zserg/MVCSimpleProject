@@ -11,27 +11,24 @@
 <title>List of devices</title>
 </head>
 <body>
-	<h1>List of devices</h1>
-	<p>Here you can see the list of the devices, edit them, remove or
-		update.</p>
+	<h1>List of cars</h1>
+	<p>Here you can see the list of the cars</p>
 	<table border="1px" cellpadding="0" cellspacing="0">
 		<thead>
 			<tr>
 				<th width="10%">id</th>
-				<th width="15%">hostName</th>
-				<th width="10%">ipAddress</th>
-				<th width="10%">enabled</th>
-				<th width="10%">createionDate</th>
+				<th width="15%">carModel</th>
+				<th width="10%">ownerName</th>
+				<th width="10%">licensePlate</th>
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="car" items="${cars}">
+			<c:forEach var="car" items="${devices}">
 				<tr>
 					<td>${car.id}</td>
-					<td>${car.hostName}</td>
-					<td>${car.ipAddress}</td>
-					<td>${car.enabled}</td>
-					<td>${car.creationDate}</td>
+					<td>${car.carModel}</td>
+					<td>${car.ownerName}</td>
+					<td>${car.licensePlate}</td>
 					<td><a
 						href="${pageContext.request.contextPath}/car/edit/${car.id}.html">Edit</a><br />
 						<a
