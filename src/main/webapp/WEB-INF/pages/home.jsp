@@ -15,7 +15,7 @@
 	<p>
 		${message}<br />
 	<p>Here you can add a new car.</p>
-	<form:form method="POST" commandName="device"
+	<form:form method="POST" commandName="car"
 		action="${pageContext.request.contextPath}/">
 		<table>
 			<tbody>

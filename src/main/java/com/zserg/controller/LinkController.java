@@ -16,27 +16,27 @@ import com.zserg.service.CarService;
 public class LinkController {
 
 	@Autowired
-	private CarService deviceService;
+	private CarService carService;
 
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public ModelAndView mainPage() {
 		ModelAndView modelAndView = new ModelAndView("home");
-		modelAndView.addObject("device", new Car());
-		List<Car> cars = deviceService.getCar();
+		modelAndView.addObject("car", new Car());
+		List<Car> cars = carService.getCar();
 		modelAndView.addObject("cars", cars);
 		return modelAndView;
 	}
 
 	@RequestMapping(value="/", method=RequestMethod.POST)
-	public ModelAndView addingDevice(@ModelAttribute Car device) {
+	public ModelAndView addingCar(@ModelAttribute Car car) {
 
 		ModelAndView modelAndView = new ModelAndView("home");
-		deviceService.addCar(device);
+		carService.addCar(car);
 
 		String message = "Car was successfully added.";
 		modelAndView.addObject("message", message);
-		modelAndView.addObject("device", new Car());
-		List<Car> cars = deviceService.getCar();
+		modelAndView.addObject("car", new Car());
+		List<Car> cars = carService.getCar();
 		modelAndView.addObject("cars", cars);
 
 		return modelAndView;
