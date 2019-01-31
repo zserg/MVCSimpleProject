@@ -1,7 +1,6 @@
 package com.zserg.dao;
 
 import java.sql.Timestamp;
-import java.util.Date;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -13,10 +12,10 @@ import com.zserg.model.Car;
 
 @Repository
 public class CarDAOImpl implements CarDAO {
-	
+
 	@Autowired
 	private SessionFactory sessionFactory;
-	
+
 	private Session getCurrentSession() {
 		return sessionFactory.getCurrentSession();
 	}
@@ -25,8 +24,9 @@ public class CarDAOImpl implements CarDAO {
 		getCurrentSession().save(car);
 	}
 
+
 	@SuppressWarnings("unchecked")
-	public List<Car> getCars() {
+	public List<Car> getCar() {
 		return getCurrentSession().createQuery("from Car").list();
 	}
 

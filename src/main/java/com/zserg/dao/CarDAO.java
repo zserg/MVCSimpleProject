@@ -7,6 +7,6 @@ import com.zserg.model.Car;
 public interface CarDAO {
 
 	public void addCar(Car car);
-	public List<Car> getCars();
+	public List<Car> getCar();
 
 }

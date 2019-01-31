@@ -12,7 +12,7 @@ import com.zserg.model.Car;
 @Service
 @Transactional
 public class CarServiceImpl implements CarService {
-	
+
 	@Autowired
 	private CarDAO carDAO;
 
@@ -20,8 +20,8 @@ public class CarServiceImpl implements CarService {
 		carDAO.addCar(car);
 	}
 
-	public List<Car> getCars() {
-		return carDAO.getCars();
+	public List<Car> getCar() {
+		return carDAO.getCar();
 	}
 
 }

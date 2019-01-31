@@ -4,6 +4,7 @@
 	</description>
 
 	<!-- Project Structure -->
+	<property name="jdk.version" value="1.7" />
 	<property name="projectName" value="MVCSimpleProject" />
 	<property name="src.dir" location="src/main/java" />
 	<property name="resources.dir" location="src/main/resources" />
@@ -27,7 +28,7 @@
 	<!-- Compile Java source from ${src.dir} and output it to ${web.classes.dir} -->
 	<target name="compile" depends="init, resolve" description="compile source code">
 		<mkdir dir="${web.classes.dir}" />
-		<javac destdir="${web.classes.dir}" debug="true" includeantruntime="false" classpathref="compile.path">
+		<javac destdir="${web.classes.dir}" source="${jdk.version}" target="${jdk.version}" debug="true" includeantruntime="false" classpathref="compile.path">
 			<src path="${src.dir}" />
 		</javac>
 	</target>

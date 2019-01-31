@@ -19,12 +19,16 @@
 		<table>
 			<tbody>
 				<tr>
-					<td>Host Name:</td>
+					<td>Car Model:</td>
 					<td><form:input path="carModel" /></td>
 				</tr>
 				<tr>
-					<td>IP Address:</td>
-					<td><form:input path="carOwner" /></td>
+					<td>Owner Name:</td>
+					<td><form:input path="ownerName" /></td>
+				</tr>
+				<tr>
+					<td>License Plate:</td>
+					<td><form:input path="licensePlate" /></td>
 				</tr>
 				<tr>
 					<td><input type="submit" value="Add" /></td>
